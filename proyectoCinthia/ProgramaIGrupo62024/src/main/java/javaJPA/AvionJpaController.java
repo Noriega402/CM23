@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaJPA;
 
 import java.io.Serializable;
@@ -16,8 +12,9 @@ import javax.persistence.criteria.Root;
 import miumg.edu.gt.programaigrupo62024.conexion.Avion;
 
 /**
- *
+ * 
  * @author Daniel Noriega
+ * 
  */
 public class AvionJpaController implements Serializable {
 
@@ -133,5 +130,4 @@ public class AvionJpaController implements Serializable {
             em.close();
         }
     }
-    
 }

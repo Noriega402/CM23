@@ -1,30 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaJPA;
 
-import java.io.Serializable;
 import java.util.List;
-import javaJPA.exceptions.NonexistentEntityException;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
+import java.io.Serializable;
 import javax.persistence.Query;
-import javax.persistence.EntityNotFoundException;
-import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.EntityManager;
 import javax.persistence.criteria.Root;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.EntityNotFoundException;
+import javaJPA.exceptions.NonexistentEntityException;
 import miumg.edu.gt.programaigrupo62024.conexion.Balsa;
 
 /**
  *
  * @author Daniel Noriega
+ *
  */
 public class BalsaJpaController implements Serializable {
+    private EntityManagerFactory emf = null;
 
     public BalsaJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
@@ -133,5 +130,4 @@ public class BalsaJpaController implements Serializable {
             em.close();
         }
     }
-    
 }
